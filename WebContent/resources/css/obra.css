@@ -1,0 +1,24 @@
+@CHARSET "ISO-8859-1";
+.obra-textfield{
+	display: table-row;
+	height: 32px;
+	overflow: auto;
+}
+
+.obra-textfield > input[type="text"]{
+	display: table-cell;	
+	height: 18px;
+	font-size: 15px;
+}
+
+.obra-textfield > label {
+	display: table-cell;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.obra-conteudo{
+	border-style: ridge;
+	border-width: 2px;
+}

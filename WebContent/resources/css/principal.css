@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";
+.subhead
+{
+	position: relative;
+	padding: 40px 0px;
+	color: #fff;
+	box-shadow: 0px 5px 50px 5px #000 inset;
+	text-align: left;
+	background: linear-gradient(to right, #28343b 0%, #b5bdc8 100%);
+}

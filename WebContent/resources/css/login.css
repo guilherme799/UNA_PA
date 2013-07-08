@@ -1,0 +1,187 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	vertical-align: baseline;
+	list-style: none;
+	outline: none;
+	text-align: center;
+}
+
+header{
+	padding-top: 5px;
+	overflow: auto;
+	padding-bottom: 5px;
+}
+
+footer{
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+}
+
+.linear-gradient-background{
+	background-color: #ffffff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#999999));
+}
+
+.radial-gradient-background{
+	background-color:#999999;	
+	background-image: -webkit-radial-gradient(circle, #FFFFFF 10%, #999999 90%);
+}
+
+.grid{
+	position: absolute;
+	box-shadow: 10px 10px 20px black;
+	border-radius: 20px;
+	background-color:white;
+	overflow: auto;
+}
+
+.grid>div{
+	margin: 10px 10px 10px 10px;
+	float: left;
+	display: inline;
+}
+
+.inline-panel{
+	width: 380px;
+}
+
+.um-panel{
+	width: 60px;
+}
+
+.dois-panel{
+	width: 140px;
+}
+
+.tres-panel{
+	width: 220px;
+}
+
+.quatro-panel{
+	width: 300px;
+}
+
+.lateral-left{
+	margin-left: 0px !important;
+}
+
+.lateral-right{
+	margin-right: 0px !important;	
+}
+
+.lateral-left>div{
+	border-bottom-left-radius: 0px !important;
+	border-top-left-radius: 0px !important;	
+}
+
+.lateral-right>div{
+	border-bottom-right-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}
+
+.float-right{
+	float: right !important;
+}
+
+.float-left{
+	float: left !important;
+}
+
+.in{
+	height: 32px;
+	border-radius: 10px;
+	border-style: inset;
+	border-width: 2px;
+}
+
+.in-button{
+	cursor: pointer;
+}
+
+.in-button .in{
+	border-style: outset;
+	border-width: 2px;
+	border-radius: 10px;
+	color: white;
+	font-size: large;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.in-button .in > .conteudo{
+	position: relative;
+	top: 5px;
+}
+
+.in-button>div{
+	float: left;
+	display: inline;
+}
+
+.in>input[type="text"], .in>input[type="password"]{
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: none;
+	font-size: 100%;
+	padding-left: 5px;
+	background-repeat: no-repeat !important;
+	background-position: 10 50% !important;
+	background-size: 60px 20px !important;
+	text-align: left;
+}
+
+.button-close{
+	cursor: pointer;
+	float: right;
+}
+
+.transparent-background{
+	background: transparent !important;
+}
+
+.invalid-field{
+	border-color: red !important;
+}
+
+.focus-field{
+	border-style: solid;
+	border-width: 2px;
+}
+
+.button-mousedown{
+	border-style: inset !important;
+	border-width: 2px !important;
+}
+
+#login{
+	/*background-image: url('/UNA_PA/resources/images/login.png');
+	background-position: center left;*/
+}
+
+#password{
+	/*background-image: url('/UNA_PA/resources/images/senha.png');
+	background-position: center left;*/	
+}
+
+#principal{
+	width: 400px;
+	left: 50%;
+	top: 50%;
+	margin-top: -135px;
+	margin-left: -210px;	
+}
+
+#window{
+	width: 240px;
+	left: 50%;
+	top: 50%;
+	margin-top: -80px;
+	margin-left: -135px;	
+}
+
+#mensagem{
+	font-weight: bold;
+}

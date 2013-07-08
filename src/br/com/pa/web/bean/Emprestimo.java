@@ -2,6 +2,9 @@ package br.com.pa.web.bean;
 
 import java.util.Date;
 
+/*
+*Classe referente ao registro de emprestimos da biblioteca.
+*/
 public class Emprestimo extends Modelo{
 	private int id_edicao;
 	private int id_usuario;

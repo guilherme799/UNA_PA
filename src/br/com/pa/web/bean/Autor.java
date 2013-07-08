@@ -1,5 +1,9 @@
 package br.com.pa.web.bean;
 
+
+/*
+ * Adicionando comentários ao projeto.
+ */
 public class Autor extends Modelo {
 	private String nome;
 

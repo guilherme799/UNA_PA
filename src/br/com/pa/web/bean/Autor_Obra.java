@@ -1,5 +1,8 @@
 package br.com.pa.web.bean;
 
+/*
+ * Adicionando um comentário à classe Autor_Obra
+ */
 public class Autor_Obra {
 	private int id_autor;
 	private int id_obra;

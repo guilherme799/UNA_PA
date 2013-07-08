@@ -1,5 +1,8 @@
 package br.com.pa.web.bean;
 
+/*
+*Adicionando um comentário à classe Obra.
+*/
 public class Obra extends Modelo{
 	private int id_editora;
 	private int id_pais;

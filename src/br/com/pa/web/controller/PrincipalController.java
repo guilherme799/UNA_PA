@@ -146,15 +146,28 @@ public class PrincipalController {
 	}
 
 	@RequestMapping(value = "/ok", method = RequestMethod.POST)
-	public @ResponseBody String ok(@RequestParam MultipartFile file) 
-			throws Exception{
-		String name = file.getOriginalFilename();
-		File f = new File("C:\\Image\\" + name);
-		FileOutputStream fs = new FileOutputStream(f);
-		
-		IOUtils.write(file.getBytes(), fs);
-		fs.close();
-		
-		return name;
+	public String ok(@RequestParam MultipartFile file, Model model){
+		Mensagem mensagem;
+		try{
+			String name = file.getOriginalFilename();
+			String  destino = "C:\\Image\\";
+			File f = new File(destino.concat(name));
+			FileOutputStream fs = new FileOutputStream(f);
+			
+			IOUtils.write(file.getBytes(), fs);
+			fs.close();
+
+			mensagem = new Mensagem(TipoMensagem.SUCESSO, PadraoMensagem.CRIAR);
+			
+			model.addAttribute("mensagem", mensagem);
+			return "user-controls/alerta";
+		}
+		catch(Exception ex){
+			mensagem = new Mensagem(TipoMensagem.ERRO); 
+			mensagem.setCorpo(ex.getMessage());
+			
+			model.addAttribute("mensagem", mensagem);
+			return "user-controls/alerta";
+		}
 	}
 }

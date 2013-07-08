@@ -3,27 +3,38 @@
 	<head>
 	<script type="text/javascript" src="/UNA_PA/resources/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="/UNA_PA/resources/js/jquery-ui-1.10.2.custom.js"></script>
-	<script type="text/javascript" src="/UNA_PA/resources/bootstrap/js/bootstrap.js"></script>		
+	<script type="text/javascript" src="/UNA_PA/resources/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/UNA_PA/resources/js/beans.js"></script>
 	<link rel="stylesheet" href="/UNA_PA/resources/bootstrap/css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="/UNA_PA/resources/bootstrap/css/bootstrap-responsive.css" type="text/css" />	
 		<script type="text/javascript">
-		var Pais = function(){
-			this.id = 0;
-			this.nome = null;
-		};
-			$(document).ready(function(){
-				/*$("#file").fileupload({
+		/*$(document).ready(function(){
+				$("#file").fileupload({
 					dataType: "text",
 					done: function(e, data){
 						$("<li>").html("Arquivo: " + data.result + " salvo com sucesso!").appendTo("#arquivos");
 					}
-				});*/
+				});
 				
 				$.post("/UNA_PA/teste",(new Pais()), function(data, status){
 					debugger;
 					document.write(data);
 				});
-			});
+			});*/
+			
+			var file_OnChange = function(sender, e){
+				var xmlhttp = new XMLHttpRequest();
+				var file = new FormData();
+				file.append('file', sender.files[0]);
+				
+				xmlhttp.open("POST", sender.dataset.url, true);
+				xmlhttp.onreadystatechange = function(){
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+						document.getElementById("resposta").innerHTML = xmlhttp.responseText;
+					}
+				};
+				xmlhttp.send(file);
+			};
 		</script>
 		<style type="text/css">
 			*{
@@ -69,11 +80,12 @@
 	</head>
 	<body>
 		<!--<form method="post" id="form1" enctype="multipart/form-data">
-		<div class="in-fileupload">
-			<span style="cursor: pointer;">Buscar</span>
-			<input type="file" id="file" name="file" data-url="/UNA_PA/ok"></input>
-		</div>
+		<div class="in-fileupload">-->
+			<input type="file" id="file" name="file" data-url="/UNA_PA/ok"
+			onchange="file_OnChange(this, event);" formenctype="multipart/form-data" accept="image/*"></input>
+		<!--</div>
 		<ol id="arquivos"></ol>
 		</form>-->
+		<div id="resposta"></div>
 	</body>
 </html>

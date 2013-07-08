@@ -35,7 +35,7 @@ public class Mensagem {
 	private String retornaCss(TipoMensagem tipo){
 		switch (tipo) {
 		case ERRO:
-			return "alert-erro";
+			return "alert-error";
 		case INFORMACAO:
 			return "alert-info";
 		case SUCESSO:
@@ -52,7 +52,7 @@ public class Mensagem {
 		case ERRO:
 			return "Erro";
 		case INFORMACAO:
-			return "Informação";
+			return "Informaï¿½ï¿½o";
 		case SUCESSO:
 			return "Sucesso";
 		default:

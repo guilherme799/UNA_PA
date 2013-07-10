@@ -1,5 +1,8 @@
 package br.com.pa.web.bean;
 
+/*
+ * Novo comentário feito no pc de casa.
+ */
 public class Pais extends Modelo {
 	private String nome;
 
